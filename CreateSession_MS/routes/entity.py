@@ -8,4 +8,4 @@ entity = APIRouter()
 
 @entity.get("/")
 async def get_charge_congressman():
-    return conn.execute(Entity.select()).fetchall()
+    return conn.execute(entitys.select()).fetchall()

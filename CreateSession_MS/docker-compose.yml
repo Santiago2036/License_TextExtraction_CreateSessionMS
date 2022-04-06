@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+ web:
+  build:
+   context: .
+  command: uvicorn manage:app --reload
+  ports:
+  - 8000:8000
+  volumes:
+  - ./:/my_app_dir
+
+ mysqldb:
+  image: mysql
+  ports:
+  - 3006:3306
+  environment:
+  - MYSQL_ROOT_PASSWORD=root
+  volumes:
+  - mysql:/var/lib/mysql
+  - mysql_config:/etc/mysql
+
+volumes:
+  mysql:
+  mysql_config:
+
+  

@@ -8,4 +8,4 @@ charge_congressman = APIRouter()
 
 @charge_congressman.get("/")
 async def get_charge_congressman():
-    return conn.execute(Charge_congressman.select()).fetchall()
+    return conn.execute(charge_congressmans.select()).fetchall()
