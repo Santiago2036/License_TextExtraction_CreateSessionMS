@@ -19,3 +19,9 @@ uvicorn manage:app --reload
 
 ## Contributing
 the best engineers of delphi
+
+##up service
+
+-docker-compose build
+
+-docker-compose up
